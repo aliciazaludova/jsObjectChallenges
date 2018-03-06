@@ -24,9 +24,35 @@ var players = [
 // do this object after figuring out first one
 // var players = [{ name: "Bob", scores: [15, 20] }, { name: "Bill", scores: [10, 15] }, { name: "Charlie", scores: [90, 10] }]; // Displays "Charlie"
 
-//plan for first object
-//1. add the two scores of each player
-    //1a. so loop through each player and get each array of scores
+//plan 
+//creat vars for solutions
+var scoresSum; // two scores of each player added
+var highestScore // highest score after added
+var winner // name of highest scoring player
+//add the two scores of each player
+    //loop through each player and get each array of scores
 for (var i = 0; i < players.length; i++) {
     console.log(players[i]);
-}
+    console.log(players[i].scores);
+    // throw into an array so we can use
+    var scoresArray = players[i].scores;
+    // new thing: players[i].scores -- haven't used
+    // do something w scoresArray
+    // add the scores within each
+    // but loop through these arrays first to get each
+    for (var j = 0; j < scoresArray.length; j++) {
+            // console.log(scoresArray[j]);
+            scoresSum = scoresArray[0] + (scoresArray[1]); // there must be a way to add scores of ALL indexes--not just 0 and 1
+            console.log(scoresSum);
+            // return scoreSum; can't do this. hmm.
+        }
+    }
+
+    // var scores = scoresSum.sort();
+    // console.log(scores); //doesn't work
+
+
+
+
+            
+   
