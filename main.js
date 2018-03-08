@@ -26,29 +26,55 @@ var players = [
 
 //plan 
 //creat vars for solutions
-var scoresSum; // two scores of each player added
-var highestScore // highest score after added
-var winner // name of highest scoring player
+var scoresSum = 0; // two scores of each player added
+var highestScore = 0; // highest score after added
+var winner = ''; // name of highest scoring player
 //add the two scores of each player
     //loop through each player and get each array of scores
 for (var i = 0; i < players.length; i++) {
+    console.log("Loop Number: " + i);
     console.log(players[i]);
     console.log(players[i].scores);
     // throw into an array so we can use
     var scoresArray = players[i].scores;
+
+    scoresSum = scoresArray[0];  // for now
+
+    if (scoresArray[1]) {
+        scoresSum += scoresArray[1];
+    }
+    console.log("scoresSum is: " + scoresSum);
+
+    currentScore = scoresSum;
+    // If our current score > the highest score
+    // then our current score IS the highest score
+    if(currentScore > highestScore) {
+        highestScore = currentScore;
+        // write code that stores their name
+    }
+
+    // figure out WHO has the high score (tip: name key on object) put it up there in the for loop and use winner var
+
+}
+
+// Who has the high score?
+
+
+
+
     // new thing: players[i].scores -- haven't used
     // do something w scoresArray
     // add the scores within each
     // but loop through these arrays first to get each
-    for (var j = 0; j < scoresArray.length; j++) {
-            // console.log(scoresArray[j]);
-            scoresSum = scoresArray[0] + (scoresArray[1]); // there must be a way to add scores of ALL indexes--not just 0 and 1
-            console.log(scoresSum);
-            // return scoreSum; can't return this. hmm.
-            sumArray = [scoresSum];
-            console.log(scoresSum);
-        }
-    }
+    // for (var j = 0; j < scoresArray.length; j++) {
+    //         // console.log(scoresArray[j]);
+    //         scoresSum = scoresArray[0] + (scoresArray[1]); // there must be a way to add scores of ALL indexes--not just 0 and 1
+    //         console.log(scoresSum);
+    //         // return scoreSum; can't return this. hmm.
+    //         sumArray = [scoresSum];
+    // //         console.log(scoresSum);
+    //     }
+    
 
     // var scores = scoresSum.sort();
     // console.log(scores); //doesn't work
@@ -252,7 +278,8 @@ function printToDom(stringToPrint, divId){
     getId.innerHTML += stringToPrint;
  }
 
- // or how about IF statements within a function?
+ // or how about IF statements
+ // should they be within a function?
 
  if (test1.operator === "add") {
      var solutionAdd = test1.a + test1.b;
@@ -273,13 +300,15 @@ console.log(solutionDivide); // 2.5
 
 //---------------------------------------------------
 // Challenge #4: Ziiiiip!
-// Let's implement the zipObject function that takes and array of names and an array of ages and smashes them into one object.
+// Let's implement the zipObject function that takes an array of names and an array of ages and smashes them into one object.
 
 // Example:
 
 // var names = ['fred', 'barney'];
 // var ages = [30,40];
 // //Output:  { 'fred': 30, 'barney': 40 }
+
+
 
 //---------------------------------------------------
 // Challenge #5: Strive Matching
